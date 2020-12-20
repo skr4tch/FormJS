@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Form application</title>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="form-wrapper">
+            <div class="form__a">
+                <form action="" method="post" id="anketa">
+                    <fieldset>
+                        <legend>Анкета участника стажировочной площадки</legend>
+                        <div class="input__field">
+                            <label for="internName">ФИО</label>
+                            <input type="text" name="internName" id="internName">
+                        </div>
+                        <div class="input__field">
+                            <label for="workplace">Место работы</label>
+                            <input type="text" name="workplace" id="workplace">
+                        </div>
+                        <div class="input__field">
+                            <label for="position">Должность</label>
+                            <input type="text" name="position" id="position">
+                        </div>
+                        <div class="input__field email">
+                            <label for="internEmail">Электронная почта</label>
+                            <input type="email" name="internEmail" id="internEmail">
+                        </div>
+                        <div class="input__field phone">
+                            <label for="mobileNumber">Сотовый телефон</label>
+                            <input type="tel" name="mobileNumber" id="mobileNumber">
+                        </div>
+                        <div class="input__field">
+                            <label for="themeSP">Тема СП</label>
+                            <input type="text" name="themeSP" id="themeSP">
+                        </div>
+                        <div class="input__field exp__options">
+                            <p class="expOptions__title">Укажите опыт работы в инклюзивном образовании (с детьми ОВЗ,
+                                инвалидами)?</p>
+
+                            <label for="noExp">Нет опыта</label>
+                            <input type="radio" name="experience" value="Нет опыта" id="noExp">
+                            <label for="oneOrLess">Год или меньше</label>
+                            <input type="radio" name="experience" value="Год или меньше" id="oneOrLess">
+                            <label for="moreThanThree">Больше 3-х лет</label>
+                            <input type="radio" name="experience" value="Больше 3-х лет" id="moreThanThree">
+                        </div>
+                        <div class="input__field prevExp__options">
+                            <p class="prevExp__title">Имеете ли опыт посещения подобных мероприятий ранее? (опыт участия
+                                в стажировочной площадке ИО)</p>
+                            <label for="yes">Да</label>
+                            <input type="radio" name="prevExp" value="yes" id="haveExp">
+                            <label for="no">Нет</label>
+                            <input type="radio" name="prevExp" value="no" id="noExp">
+                        </div>
+                        <div class="input__filed">
+                            <label for="wishes">Ваши пожелания и предложения организаторам стажировки?</label>
+                            <textarea name="wishes" id="wishes" cols="30" rows="10"></textarea>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="form__b">
+                <form action="" method="post" id="grafik">
+                    <fieldset>
+                        <legend>График работы стажировочных площадок инклюзивного образования (СП ИО) на 2020 - 2021
+                            уч.год.</legend>
+                        <label for="programTheme">Тема программы СП ИО:</label>
+                        <select name="programTheme" id="programTheme">
+                        </select>
+                        <div class="input__field disabled">
+                            <label for="endDate">Дата окончания приема заявок</label>
+                            <input type="text" name="endDate" id="endDate" disabled>
+                        </div>
+                        <div class="input__field disabled">
+                            <label for="place">Стажировочный пункт</label>
+                            <input type="text" name="place" id="place" disabled>
+                        </div>
+                        <div class="input__field disabled">
+                            <label for="district">Район</label>
+                            <input type="text" name="district" id="district" disabled>
+                        </div>
+                        <div class="input__field disabled">
+                            <label for="responsiblePersons">Ответственные</label>
+                            <input type="text" name="responsiblePersons" id="responsiblePersons" disabled>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <button type="submit" id="sendButton">Send</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Form application</title>
+</head>
+
+<body>
+  <div class="page-wrapper container-fluid">
+    <div class="form-wrapper container">
+      <form action="/submit" method="post" id="anketa" class="form-group">
+        <fieldset>
+          <legend>Анкета участника стажировочной площадки</legend>
+          <div class="input__field">
+            <label for="internName">ФИО</label>
+            <input type="text" name="internName" id="internName" class="form-control">
+          </div>
+          <div class="input__field">
+            <label for="workplace">Место работы</label>
+            <input type="text" name="workplace" id="workplace" class="form-control">
+          </div>
+          <div class="input__field">
+            <label for="position">Должность</label>
+            <input type="text" name="position" id="position" class="form-control">
+          </div>
+          <div class="input__field email">
+            <label for="internEmail">Электронная почта</label>
+            <input type="email" name="internEmail" id="internEmail" class="form-control">
+          </div>
+          <div class="input__field phone">
+            <label for="mobileNumber">Сотовый телефон</label>
+            <input type="tel" name="mobileNumber" id="mobileNumber" class="form-control">
+          </div>
+          <div class="input__field">
+            <label for="themeSP">Тема СП</label>
+            <input type="text" name="themeSP" id="themeSP" class="form-control">
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-4 pt-0">Укажите опыт работы в инклюзивном образовании (с детьми ОВЗ,
+              инвалидами)?</legend>
+            <div class="col-sm-8">
+              <div class="form-check">
+                <input type="radio" name="experience" value="Нет опыта" id="noExp" class="form-check-input">
+                <label for="noExp" class="form-check-label">Нет опыта</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="experience" value="Год или меньше" id="oneOrLess" class="form-check-input">
+                <label for="oneOrLess" class="form-check-label">Год или меньше</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="experience" value="Больше 3-х лет" id="moreThanThree"
+                  class="form-check-input">
+                <label for="moreThanThree" class="form-check-label">Больше 3-х лет</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-4 pt-0">Имеете ли опыт посещения подобных мероприятий ранее? (опыт
+              участия в стажировочной площадке ИО)</legend>
+
+            <div class="col-sm-8">
+              <div class="form-check">
+                <input type="radio" name="prevExp" value="yes" id="haveExp" class="form-check-input">
+                <label for="yes" class="form-check-label">Да</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="prevExp" value="no" id="noExp" class="form-check-input">
+                <label for="no" class="form-check-label">Нет</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <label for="wishes">Ваши пожелания и предложения организаторам стажировки?</label>
+          <textarea name="wishes" id="wishes" rows="3" class="form-control"></textarea>
+        </div>
+        </fieldset>
+
+
+        <fieldset class="form-group">
+          <legend>График работы стажировочных площадок инклюзивного образования (СП ИО) на 2020 - 2021
+            уч.год.</legend>
+          <div class="form-group">
+            <label for="programTheme">Тема программы СП ИО:</label>
+            <select name="programTheme" id="programTheme" class="form-control">
+          </div>
+          </select>
+          <div class="input__field disabled">
+            <label for="endDate">Дата окончания приема заявок</label>
+            <input type="text" name="endDate" id="endDate" class="form-control" disabled>
+          </div>
+          <div class="input__field disabled">
+            <label for="place">Стажировочный пункт</label>
+            <input type="text" name="place" id="place" class="form-control" disabled>
+          </div>
+          <div class="input__field disabled">
+            <label for="district">Район</label>
+            <input type="text" name="district" id="district" class="form-control" disabled>
+          </div>
+          <div class="input__field disabled">
+            <label for="responsiblePersons">Ответственные</label>
+            <input type="text" name="responsiblePersons" id="responsiblePersons" class="form-control" disabled>
+          </div>
+        </fieldset>
+        <button type="submit" id="sendButton" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="public/js/script.js"></script>
+</body>
+
+</html>
